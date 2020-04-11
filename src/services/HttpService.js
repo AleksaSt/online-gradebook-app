@@ -12,4 +12,11 @@ export class HttpService{
     setHeaders(headers) {
         Object.assign(axios.defaults.headers.common, headers)
     }
+
+    parseUrl(url){
+        if(typeof url === "string" && url.includes(BASE_URL)){
+           return url.substr(BASE_URL.length)
+       }
+        return url
+    }
 }

@@ -1,12 +1,10 @@
 <template>
     <div>
         <div class="container">
-            <div class="page-header mt-3">
-                <h3>Register</h3>
-            </div>
              <div v-for="(error, index) in errors" :key="index" class="alert alert-danger mt-3">
                 {{ error[0] }}
             </div>
+        <img src="https://lh4.googleusercontent.com/proxy/eZt2H161dRZddUhZ4cmeF78862NccU6NMxOwFR6sRzXRCTNR_GaSV-K_pAgdlZ695osxzyOkpwfDATpoSRijkZAVSsMFM7n_Y28xg02V3ddkhzQ" class="img">
             <form @submit.prevent>
                 <div class="form-group">
                     <label><b>First name</b></label>
@@ -39,7 +37,7 @@
                         I accept Terms and Conditions.
                     </label>
                 </div>
-                <button type="submit" @click="register()" class="btn btn-primary mt-3">Register</button>
+                <button type="submit" @click="register()" class="btn btn-success mt-3">Register</button>
             </form>
         </div>
     </div>
@@ -76,3 +74,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.img{
+    width: 100px;
+    height: 100px;
+}
+</style>

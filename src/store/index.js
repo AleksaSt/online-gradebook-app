@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { AuthStore } from './AuthStore'
+import { GradebooksStore } from './GradebooksStore'
 
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store =  new Vuex.Store({
   state: {
   },
   mutations: {
@@ -13,6 +14,9 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    AuthStore
+    AuthStore,
+    GradebooksStore
   }
 })
+
+export default store
