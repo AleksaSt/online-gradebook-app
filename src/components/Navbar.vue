@@ -18,6 +18,9 @@
               <li v-if="isUserLoggedIn" class="nav-item active">
                 <a class="nav-link" href="/my-gradebook">My Gradebook</a>
               </li>
+                <li v-if="isUserLoggedIn" class="nav-item active">
+                <a class="nav-link" href="/students/create">Add student</a>
+              </li>
               <li v-if="isUserLoggedIn" class="nav-item active">
                 <a class="nav-link" href="/gradebooks/create">Add Gradebook</a>
               </li>

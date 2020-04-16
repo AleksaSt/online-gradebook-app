@@ -4,6 +4,12 @@ import Gradebooks from '../views/Gradebooks.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import AllProfessors from '../views/AllProfessors.vue'
+import AddGradebook from '../views/AddGradebook.vue'
+import SingleGradebook from '../views/SingleGradebook.vue'
+import SingleTeacher from '../views/SingleTeacher.vue'
+import AddProfessor from '../views/AddProfessor.vue'
+import MyGradebook from '../views/MyGradebook.vue'
+import AddStudent from '../views/AddStudent.vue'
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -16,6 +22,16 @@ Vue.use(VueRouter)
     meta: {
       guest: true
     } 
+  },
+  {
+    path: '/gradebooks/create',
+    name: 'AddGradebook',
+    component: AddGradebook,
+  },
+  {
+    path: '/gradebooks/:id',
+    name: 'SingleGradebook',
+    component: SingleGradebook,
   },
   {
     path: '/login',
@@ -37,6 +53,36 @@ Vue.use(VueRouter)
     path: '/teachers',
     name: 'AllProfessors',
     component: AllProfessors,
+  },
+  {
+    path: '/professors/create',
+    name: 'AddProfessor',
+    component: AddProfessor,
+  },
+  {
+    path: '/teachers/:id',
+    name: 'SingleTeacher',
+    component: SingleTeacher,
+  },
+  {
+    path: '/my-gradebook',
+    name: 'MyGradebook',
+    component: MyGradebook,
+  },
+  {
+    path: '/gradebooks/:id/students/create',
+    name: 'AddMyStudent',
+    component: AddStudent,
+  },
+  {
+    path: '/students/create',
+    name: 'AddStudent',
+    component: AddStudent,
+  },
+  {
+    path: '/gradebooks/:id/edit',
+    name: 'EditGradebook',
+    component: AddGradebook,
   }
 ]
 

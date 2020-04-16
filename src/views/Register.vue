@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container">
-             <div v-for="(error, index) in errors" :key="index" class="alert alert-danger mt-3">
+            <div v-for="(error, index) in errors" :key="index" class="alert alert-danger mt-3">
                 {{ error[0] }}
             </div>
         <img src="https://lh4.googleusercontent.com/proxy/eZt2H161dRZddUhZ4cmeF78862NccU6NMxOwFR6sRzXRCTNR_GaSV-K_pAgdlZ695osxzyOkpwfDATpoSRijkZAVSsMFM7n_Y28xg02V3ddkhzQ" class="img">
@@ -17,6 +17,10 @@
                 <div class="form-group">
                     <label><b>Email</b></label>
                     <input type="text" class="form-control" v-model="user.email" placeholder="Email" >
+                </div>
+                <div class="form-group">
+                    <label><b>Photo</b></label>
+                    <input type="text" class="form-control" v-model="user.photo" placeholder="Photo Url" >
                 </div>
                 <div class="form-group">
                     <label><b>Password</b></label>

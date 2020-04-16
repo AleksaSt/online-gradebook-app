@@ -28,6 +28,7 @@ export const AuthStore = {
                 context.commit('setLoginErrors', null)
                 context.commit('setToken', response.data.token)                
                 localStorage.setItem('token', response.data.token)
+                localStorage.setItem('user_id', response.data.user_id)
 
             }catch(exception){
                 context.commit('setLoginErrors', exception.response.data.error)
